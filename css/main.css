@@ -1,17 +1,236 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic');
+
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
-.header-container {
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  color: #444444;
+}
+
+.header_container {
   background-color: #fafafa;
 }
 
+.header_logo {
+  float: left;
+  padding-top: 16px;
+  padding-bottom: 17px;
+}
 
+.btn {
+  border: none;
+  background-color: inherit;
+  padding: 10px 23px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
 
+.btn:hover {
+  background: #12a32d;
+}
 
+.header_button {
+  float: right;
+  width: 146px;
+  padding: 8px 21px 12px;
+  margin: 17px 44px 17px 51px;
+  background-color: #15bd34;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 22px;
+}
 
+.navigation {
+  float: right;
+  width: 312px;
+}
 
+.navigation a {
+  float: left;
+  text-decoration: none;
+  color: #444444;
+  padding: 5px;
+  margin: 19px 10px 10px 10px;
+}
 
+.navigation ul {
+  margin-top: 0;
+}
+
+.navigation ul li {
+  display: inline;
+}
+
+.header_phone {
+  float: right;
+  font-size: 24px;
+  margin-top: 6px;
+}
+
+.header_openhours {
+  font-size: 16px;
+  float: right;
+  margin-top: -4px;
+}
+
+.main {
+  height: 850px;
+  position: relative;
+  background-color: transparent;
+}
+
+.main_container {
+  overflow: hidden;
+}
+
+.main::before {
+   content: " ";
+   position: absolute;
+   width: inherit;
+   height: inherit;
+   left: 811px;
+   z-index: -1;
+   background-image: url("../img/main_image.jpg");
+   background-repeat: no-repeat;
+}
+
+.main_heading {
+  margin-left: -2px;
+  padding-top: 211px;
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 700;
+  color: #555;
+}
+
+.main_subheading {
+  margin-left: -2px;
+  margin-top: 13px;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #555;
+}
+
+.main_icons {
+  display: flex;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 243px;
+}
+
+.main_icons_item {
+  display: flex;
+  width: 244px;
+}
+
+.main_icons_item:nth-of-type(3) {
+  margin-left: 39px;
+  position: relative;
+  bottom: 3px;
+  left: 10px;
+}
+
+.main_icons_item:nth-of-type(3) p {
+  margin-left: -10px;
+}
+
+.main_icons_item p {
+  display: flex;
+  width: 100px;
+}
+
+.main_icons_item img {
+  margin-right: 20px;
+  position: relative;
+  bottom: 7px;
+}
 
 
 
@@ -30,63 +249,17 @@
     INTERMEDIATE: Menu
    ==================== */
 
-    nav a {
-        float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
-        margin-bottom: 0;
-    }
 
-    nav li:first-child a {
-        margin-left: 0;
-    }
 
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
 }
 
 @media only screen and (min-width: 768px) {
 
 /* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-        float: left;
-    }
-
-    nav {
-        float: right;
-        width: 38%;
-    }
-
-/* ============
     WIDE: Main
    ============ */
 
-    .main article {
-        float: left;
-        width: 57%;
-    }
 
-    .main aside {
-        float: right;
-        width: 28%;
-    }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -96,7 +269,7 @@
    =============== */
 
     .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
+        width: 1203px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
 }
@@ -146,7 +319,7 @@
 }
 
 .clearfix {
-    *zoom: 1;
+  zoom: 1;
 }
 
 /* ==========================================================================
