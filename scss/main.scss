@@ -135,8 +135,23 @@ body {
   float: left;
   text-decoration: none;
   color: #444444;
-  padding: 5px;
-  margin: 19px 10px 10px 10px;
+  padding: 5px 0;
+  margin: 19px 15px 10px 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navigation a:hover {
+  color: #15bd34;
+}
+
+.navigation a::before {
+  content: " ";
+  width: 100px;
+  height: 1px;
+  background-color: #d2d2d2;
+  position: absolute;
+  bottom: 2px;
 }
 
 .navigation ul {
@@ -176,7 +191,7 @@ body {
    height: inherit;
    left: 811px;
    z-index: -1;
-   background-image: url("../img/main_image.jpg");
+   background-image: url("../../img/main_image.jpg");
    background-repeat: no-repeat;
 }
 
@@ -200,6 +215,7 @@ body {
 
 .main_icons {
   display: flex;
+  flex-wrap: wrap;
   font-size: 18px;
   line-height: 1.2;
   margin-top: 243px;
@@ -232,6 +248,11 @@ body {
   bottom: 7px;
 }
 
+.wrapper {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
 
 
 
@@ -243,36 +264,58 @@ body {
    Media Queries
    ========================================================================== */
 
+@media only screen and (max-width: 479px) {
+  .main_heading {
+    padding-top: 70px;
+    font-size: 36px;
+  }
+
+  .main_subheading {
+    font-size: 22px;
+  }
+}
+
 @media only screen and (min-width: 480px) {
 
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
+}
 
+@media only screen and (max-width: 767px) {
+  .header_container header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 
+  .main_icons {
+    margin-top: 100px;
+  }
 
+  .main_icons_item:nth-of-type(3) {
+    margin-left: 0px;
+    position: initial;
+  }
+
+  .main_icons_item {
+    margin-top: 15px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
 
-/* ============
-    WIDE: Main
-   ============ */
+}
 
+@media only screen and (max-width: 1239px) {
 
 }
 
-@media only screen and (min-width: 1140px) {
-
-/* ===============
-    Maximal Width
-   =============== */
-
-    .wrapper {
-        width: 1203px; /* 1140px - 10% for margins */
-        margin: 0 auto;
-    }
+@media only screen and (min-width: 1240px) {
+  .wrapper {
+    width: 1203px;
+    margin: 0 auto;
+  }
 }
+
+
 
 /* ==========================================================================
    Helper classes
