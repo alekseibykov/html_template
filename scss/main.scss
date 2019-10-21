@@ -98,8 +98,12 @@ body {
 
 .header_logo {
   float: left;
-  padding-top: 16px;
-  padding-bottom: 17px;
+  margin-top: 16px;
+  margin-bottom: 17px;
+}
+
+.header_logo img {
+
 }
 
 .btn {
@@ -231,6 +235,12 @@ body {
   position: relative;
   bottom: 3px;
   left: 10px;
+}
+
+.main_icons_item:nth-of-type(1) img {
+  position: relative;
+  bottom: 4px;
+  opacity: 0.8;
 }
 
 .main_icons_item:nth-of-type(3) p {
