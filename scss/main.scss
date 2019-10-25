@@ -90,7 +90,6 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
   color: #444444;
-  background-color: #f5f5f5;
 }
 
 .header_container {
@@ -188,6 +187,7 @@ body {
 .main_container {
   overflow: hidden;
   background-color: #fff;
+  position: relative;
 }
 
 .main::before {
@@ -264,6 +264,33 @@ body {
   margin-right: 15px;
 }
 
+.services_container {
+  position: relative;
+  background-color: #f5f5f5;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    background-image: linear-gradient(0deg, #f5f5f5, #fff);
+    width: 100%;
+    height: 80px;
+    top: -70px;
+  }
+}
+
+.location_container {
+  position: relative;
+  background-color: #fff;
+
+  &:before {
+    content: " ";
+    position: absolute;
+    background-image: linear-gradient(0deg, #fff, #f5f5f5);
+    width: 100%;
+    height: 150px;
+  }
+}
+
 .services {
 
 
@@ -304,6 +331,10 @@ body {
 
 }
 
+.prices_container {
+  background-color: #f5f5f5;
+}
+
 .prices {
   // width: 1203px;
   // margin: 0 auto;
@@ -311,7 +342,7 @@ body {
   h2 {
     font-size: 48px;
     text-align: center;
-    margin-top: 60px;
+    padding-top: 60px;
     margin-bottom: 50px;
   }
 }
@@ -393,7 +424,7 @@ body {
 }
 
 .wrapper_1400 {
-  width: 1403px;
+  max-width: 1403px;
   margin: 0 auto;
 }
 
@@ -413,6 +444,10 @@ body {
 }
 
 .seotext {
+  background-color: #fff;
+}
+
+.seotext_1 {
   width: 1030px;
   margin: 0 auto;
   h3 {
@@ -442,6 +477,7 @@ body {
 
 
 .footer_container {
+  background-color: #fff;
   margin-top: 100px;
 
   footer {
