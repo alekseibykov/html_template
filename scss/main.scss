@@ -6,8 +6,8 @@
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 
@@ -18,8 +18,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -38,8 +38,8 @@ body {
 }
 
 /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -123,7 +123,7 @@ body {
   float: right;
   width: 146px;
   padding: 8px 21px 12px;
-  margin: 17px 44px 17px 51px;
+  margin: 17px 44px 17px 11px;
   background-color: #15bd34;
   color: #fff;
   font-weight: 700;
@@ -202,7 +202,7 @@ body {
 
 .main_heading {
   margin-left: -2px;
-  padding-top: 211px;
+  padding-top: 210px;
   font-size: 48px;
   line-height: 62px;
   font-weight: 700;
@@ -297,8 +297,8 @@ body {
   h2 {
     font-size: 48px;
     text-align:center;
-    margin-top: 70px;
-    margin-bottom: 60px;
+    margin-top: 12px;
+    margin-bottom: 83px;
   }
 }
 
@@ -306,6 +306,8 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+
 
 .services_item {
   background-color: #fff;
@@ -322,6 +324,7 @@ body {
   }
 
   p {
+    padding-top: 33px;
     padding-left: 52px;
     padding-right: 52px;
     font-size: 18px;
@@ -477,11 +480,90 @@ body {
 
 
 .footer_container {
-  background-color: #fff;
+  background-color: #fafafa;
   margin-top: 100px;
 
   footer {
     display: flex;
+    width: 1030px;
+    margin: 0 auto;
+    padding-top: 50px;
+
+    div {
+      width: 257px;
+    }
+  }
+}
+
+.col_1 {
+
+  img {
+    margin-bottom: 41px;
+  }
+
+  p {
+    margin-top: 26px;
+    line-height: 1.2;
+  }
+}
+
+.col_2 {
+  margin-bottom: 45px;
+
+  ul {
+    margin-top: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    margin-left: 80px;
+    text-decoration: none;
+    color: #444444;
+  }
+}
+
+.col_3 {
+  margin-bottom: 45px;
+
+  ul {
+    margin-left: 44px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #444444;
+  }
+}
+
+.col_4 {
+  display: flex;
+  flex-direction: column;
+
+  .header_phone p {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .header_openhours {
+    text-align: right;
+  }
+
+  .footer_email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: right;
+  }
+
+  p {
+    float: right;
   }
 }
 
@@ -545,45 +627,53 @@ body {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+ .two_lines {
+   h3 {
+     padding-top: 54px;
+   }
+   p {
+     padding-top: 27px;
+   }
+ }
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 .clearfix {
