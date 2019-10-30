@@ -94,16 +94,21 @@ body {
 
 .header_container {
   background-color: #fafafa;
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    a {
+      // margin-right: auto;
+    }
+  }
 }
 
 .header_logo {
-  float: left;
   margin-top: 16px;
   margin-bottom: 17px;
-}
-
-.header_logo img {
-
 }
 
 .btn {
@@ -120,10 +125,9 @@ body {
 }
 
 .header_button {
-  float: right;
   width: 146px;
   padding: 8px 21px 12px;
-  margin: 17px 44px 17px 11px;
+  margin: 17px 42px 17px 11px;
   background-color: #15bd34;
   color: #fff;
   font-weight: 700;
@@ -131,31 +135,45 @@ body {
 }
 
 .navigation {
-  float: right;
-  width: 312px;
+  margin-top: 24px;
+  margin-right: 73px;
 }
 
-.navigation a {
-  float: left;
-  text-decoration: none;
-  color: #444444;
-  padding: 5px 0;
-  margin: 19px 15px 10px 15px;
-  position: relative;
-  overflow: hidden;
+.navigation {
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 0 29px;
+    padding-bottom: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #444444;
+    padding: 5px 0;
+
+    position: relative;
+    overflow: hidden;
+  }
 }
 
 .navigation a:hover {
   color: #15bd34;
 }
 
-.navigation a::before {
+.navigation li::before {
   content: " ";
   width: 100px;
   height: 1px;
   background-color: #d2d2d2;
   position: absolute;
-  bottom: 2px;
+  bottom: 17px;
+  right: 0;
 }
 
 .navigation ul {
@@ -167,14 +185,16 @@ body {
 }
 
 .header_phone {
-  float: right;
   font-size: 24px;
   margin-top: 6px;
+
+  div {
+    text-align: right;
+  }
 }
 
 .header_openhours {
   font-size: 16px;
-  float: right;
   margin-top: -4px;
 }
 
@@ -311,7 +331,7 @@ body {
 
 .services_item {
   background-color: #fff;
-  width: 400px;
+  max-width: 400px;
   height: 283px;
   // border: 1px solid;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.35);
@@ -331,7 +351,11 @@ body {
     line-height: 1.2;
     text-align: center;
   }
+}
 
+.active {
+  color: #fff;
+  background-color: #15bd34;
 }
 
 .prices_container {
@@ -339,21 +363,19 @@ body {
 }
 
 .prices {
-  // width: 1203px;
-  // margin: 0 auto;
 
   h2 {
     font-size: 48px;
     text-align: center;
-    padding-top: 60px;
-    margin-bottom: 50px;
+    padding-top: 107px;
+    margin-bottom: 56px;
   }
 }
 
 .prices_item {
   background-color: #fff;
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 19px;
+  padding: 16px;
   padding-left: 85px;
   border-width: 1px;
   border-color: rgb(207, 207, 207);
@@ -369,40 +391,48 @@ body {
         height: 13.03px;
         background-image: url('../../img/icon_arrow_down.svg');
         position: absolute;
-        left: -55px;
-        top: 7px;
+        left: -54px;
+        top: 9px;
     }
   }
+
+
 }
 
-.after {
+.prices_inner {
+  margin-top: 24px;
+  margin-bottom: 19px;
+}
+
+.prices_inner_item {
   position: relative;
-
-}
-
-.after_inner {
-  position: absolute;
-  color: #b9b9b9;
-  width: 100%;
-  max-width: 740px;
   overflow: hidden;
-
+  margin-top: 10px;
 }
 
-// .after::after {
-//   content: " .................................................................................................................................................................................................. ";
+// .after_inner {
 //   position: absolute;
 //   color: #b9b9b9;
-//   // width: 100%;
-//   height: 100%;
+//   width: 100%;
 //   max-width: 740px;
 //   overflow: hidden;
 //
 // }
 
+.after::after {
+  content: " .................................................................................................................................................................................................. ";
+  position: absolute;
+  color: #b9b9b9;
+  // width: 100%;
+  height: 100%;
+  max-width: 840px;
+  overflow: hidden;
+
+}
+
 .price_right {
   float: right;
-  padding-right: 85px;
+  padding-right: 70px;
   padding-left: 3px;
   position: relative;
   background-color: #fff;
@@ -411,9 +441,8 @@ body {
 
 
 .location {
-
   h2 {
-    margin-top: 150px;
+    margin-top: 134px;
     font-size: 48px;
     text-align: center;
   }
@@ -421,9 +450,9 @@ body {
 
 .location_content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 66px;
 }
 
 .wrapper_1400 {
@@ -446,16 +475,119 @@ body {
   }
 }
 
+.clinic_1 {
+  margin-left: 75px;
+
+  p {
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  p:nth-of-type(1) {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      // width: 48px;
+      // height: 48px;
+      width: 26px;
+      height: 26px;
+      left: -60px;
+      background-image: url("../../img/icons8-company-48_crop.png");
+      background-size: cover;
+    }
+  }
+
+  p:nth-of-type(2) {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      left: -60px;
+      background-image: url("../../img/icons8-ringer-volume-48_crop.png");
+      background-size: cover;
+    }
+  }
+
+  p:nth-of-type(3) {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      // width: 48px;
+      // height: 48px;
+      width: 26px;
+      height: 26px;
+      left: -60px;
+      background-image: url("../../img/icons8-clock_48_crop.png");
+      background-size: cover;
+    }
+  }
+}
+.clinic_2 {
+  margin-left: 75px;
+
+  p {
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+
+  p:nth-of-type(1) {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      // width: 48px;
+      // height: 48px;
+      width: 26px;
+      height: 26px;
+      left: -60px;
+      background-image: url("../../img/icons8-company-48_crop.png");
+      background-size: cover;
+    }
+  }
+
+  p:nth-of-type(2) {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      left: -60px;
+      background-image: url("../../img/icons8-ringer-volume-48_crop.png");
+      background-size: cover;
+    }
+  }
+
+  p:nth-of-type(3) {
+    position: relative;
+    &:before {
+      content: " ";
+      position: absolute;
+      // width: 48px;
+      // height: 48px;
+      width: 26px;
+      height: 26px;
+      left: -60px;
+      background-image: url("../../img/icons8-clock_48_crop.png");
+      background-size: cover;
+    }
+  }
+}
+
 .seotext {
   background-color: #fff;
 }
 
 .seotext_1 {
-  width: 1030px;
+  max-width: 1030px;
   margin: 0 auto;
   h3 {
-    margin-top: 150px;
-    margin-bottom: 15px;
+    margin-top: 139px;
+    margin-bottom: 18px;
     font-size: 30px;
   }
 
@@ -465,11 +597,11 @@ body {
 }
 
 .seotext_2 {
-  width: 1030px;
+  max-width: 1030px;
   margin: 0 auto;
   h3 {
-    margin-top: 110px;
-    margin-bottom: 15px;
+    margin-top: 102px;
+    margin-bottom: 19px;
     font-size: 30px;
   }
 
@@ -481,11 +613,12 @@ body {
 
 .footer_container {
   background-color: #fafafa;
-  margin-top: 100px;
+  margin-top: 84px;
 
   footer {
     display: flex;
-    width: 1030px;
+    flex-wrap: wrap;
+    max-width: 1030px;
     margin: 0 auto;
     padding-top: 50px;
 
@@ -545,6 +678,8 @@ body {
 .col_4 {
   display: flex;
   flex-direction: column;
+  text-align: right;
+  flex-wrap: wrap;
 
   .header_phone p {
     font-size: 30px;
@@ -552,19 +687,16 @@ body {
   }
 
   .header_openhours {
-    text-align: right;
+    text-align: inherit;
   }
 
   .footer_email {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    text-align: right;
+    text-align: inherit;
   }
 
-  p {
-    float: right;
-  }
 }
 
 /* ==========================================================================
@@ -580,6 +712,10 @@ body {
   .main_subheading {
     font-size: 22px;
   }
+
+  .col_4 {
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 480px) {
@@ -590,7 +726,7 @@ body {
   .header_container header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
   .main_icons {
@@ -605,14 +741,60 @@ body {
   .main_icons_item {
     margin-top: 15px;
   }
+
+  .col_2 {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .col_3 {
+    display: none !important;
+    visibility: hidden;
+  }
+
+  .footer_container div {
+    margin: 10px;
+  }
+
+
 }
 
 @media only screen and (min-width: 768px) {
+  .header_container {
+    header {
+      a {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1033px) {
+  .header_container {
+    a {
+      margin-right: 0;
+    }
+    header {
+      justify-content: center;
+    }
+  }
 
 }
 
 @media only screen and (max-width: 1239px) {
+  .wrapper {
+    margin: 0 25px;
+  }
 
+  .services_items {
+    justify-content: center;
+  }
+
+  .footer_container footer {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: space-around;
+  }
 }
 
 @media only screen and (min-width: 1240px) {
