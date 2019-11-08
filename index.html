@@ -31,8 +31,8 @@
     <![endif]-->
   <div class="header_container">
     <header class="wrapper">
-      <a href="https://alekseibykov.github.io/html_template/">
-        <img class="header_logo" src="./img/logo_svg.svg" alt="temporary logo" width="213" height="44">
+      <a class="header_logo" href="https://alekseibykov.github.io/html_template/">
+        <img src="./img/logo_svg.svg" alt="temporary logo" width="213" height="44">
       </a>
       <nav class="navigation">
         <ul>
@@ -41,7 +41,7 @@
           <li><a href="#seotext">О компании</a></li>
         </ul>
       </nav>
-      <button class="btn header_button" type="button" name="button">Наши клиники</button>
+      <a class="btn header_button" type="button" name="button" href="#location_heading">Наши клиники</a>
       <div class="header_phone">
         <p>8 495 850 19 61</p>
         <div class="header_openhours">
@@ -109,46 +109,7 @@
   <div class="prices_container">
     <div class="prices wrapper">
       <h2 id="prices_heading">Цены</h2>
-      <!-- <label for="spoilerbutton">
-        <h4>Терапевтическая стоматология</h4>
-      </label>
-      <input style="display:none;" class="spoilerbutton" id="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-
-      <div class="spoiler_test">
-        <div>
-          PUT CONTENT YOU WISH TO HIDE HERE PUT CONTENT YOU WISH TO HIDE HERE PUT CONTENT YOU WISH TO HIDE HERE PUT CONTENT YOU WISH TO HIDE HERE PUT CONTENT YOU WISH TO HIDE HERE PUT CONTENT YOU WISH TO HIDE HERE
-        </div>
-      </div> -->
-
-
       <div class="prices_item">
-        <label for="spoilerbutton">
-          <h4>Терапевтическая стоматология</h4>
-        </label>
-        <input style="display:none;" class="spoilerbutton" id="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-        <div class="spoiler_test">
-          <div class="prices_inner">
-            <div class="prices_inner_item">
-              <span class="after">Консультация без осмотра</span>
-              <span class="price_right">100 руб.</span>
-            </div>
-            <div class="prices_inner_item">
-              <span class="after">Консультация с осмотром</span>
-              <span class="price_right">200 руб.</span>
-            </div>
-            <div class="prices_inner_item">
-              <span class="after">Обезбаливание инъекционное</span>
-              <span class="price_right">200 руб.</span>
-            </div>
-            <div class="prices_inner_item">
-              <span class="after">Обезбаливание аппликационное</span>
-              <span class="price_right">200 руб.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="prices_item">
         <div class="spoiler">
           <input checked type="checkbox" id="spoiler1">
           <label for="spoiler1">
@@ -173,7 +134,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <div class="prices_item">
         <div class="spoiler">
@@ -260,7 +221,7 @@
 
   <div class="location_container">
     <div class="location clearfix wrapper_1400">
-      <h2>Наши клиники</h2>
+      <h2 id="location_heading">Наши клиники</h2>
       <div class="location_content">
         <!-- <img class="location_img" src="./img/Map.png" alt=""> -->
         <div class="ymaps">

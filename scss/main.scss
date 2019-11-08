@@ -92,7 +92,7 @@ body {
   }
 }
 
-.header_logo {
+.header_logo img {
   margin-top: 16px;
   margin-bottom: 17px;
 }
@@ -119,6 +119,7 @@ body {
   color: #fff;
   font-weight: 700;
   border-radius: 22px;
+  text-decoration: none;
 }
 
 .navigation {
@@ -195,7 +196,7 @@ body {
 
   background-image: url("../../img/main_image.jpg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right top;
   background-size: contain;
   max-width: 1920px;
   margin: auto;
@@ -627,6 +628,10 @@ body {
     div {
       width: 257px;
     }
+
+    a:hover {
+      color: #15bd34;
+    }
   }
 }
 
@@ -744,29 +749,6 @@ body {
 .ymaps {
   display: block;
 }
-
-.spoilerbutton {
-  display: block;
-  margin: 5px 0;
-}
-
-.spoiler_test {
-  overflow: hidden;
-}
-
-.spoiler_test > div {
-  overflow: hidden;
-  transition: all 1s ease;
-}
-
-.spoilerbutton[value="Show"]+.spoiler_test>div {
-  max-height: 0;
-}
-
-.spoilerbutton[value="Hide"]+.spoiler_test>div {
-  max-height: 500px; /*use a big value here*/
-}
-
 
 
 /* ==========================================================================
@@ -903,12 +885,8 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .header_container {
-    header {
-      a {
-        margin-right: auto;
-      }
-    }
+  .header_logo {
+    margin-right: auto;
   }
 }
 @media only screen and (max-width: 1033px) {
