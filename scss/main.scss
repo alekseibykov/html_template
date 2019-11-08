@@ -184,26 +184,44 @@ body {
 .main {
   height: 900px;
   position: relative;
-  background-color: transparent;
+  // background-image: url("../../img/Shape_1.svg");
+  // background-repeat: no-repeat;
 }
 
 .main_container {
   overflow: hidden;
   background-color: #fff;
   position: relative;
-}
 
-.main::before {
-  content: " ";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  left: 811px;
   background-image: url("../../img/main_image.jpg");
   background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  max-width: 1920px;
+  margin: auto;
+
+  // &:before {
+  //   content: " ";
+  //   position: absolute;
+  //   background: rgba(244,244,244,0.52);
+  //   height: 100%;
+  //   width: 100%;
+  //   z-index: 2;
+  // }
 }
 
+// .main::before {
+//   content: " ";
+//   position: absolute;
+//   width: inherit;
+//   height: inherit;
+//   left: 811px;
+//   background-image: url("../../img/main_image.jpg");
+//   background-repeat: no-repeat;
+// }
+
 .main_heading {
+  width: 600px;
   margin-left: -2px;
   padding-top: 210px;
   font-size: 48px;
@@ -219,6 +237,7 @@ body {
   line-height: 40px;
   font-weight: 700;
   color: #555;
+  z-index: 3;
 }
 
 .main_icons {
@@ -600,7 +619,7 @@ body {
 
   footer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     max-width: 1030px;
     margin: 0 auto;
     padding-top: 50px;
@@ -688,6 +707,7 @@ body {
   position: relative;
   cursor: pointer;
 
+
   &:before {
     content: " ";
     width: 23.625px;
@@ -714,7 +734,40 @@ body {
 .spoiler :checked ~ div {
   display: block; /* Показываем спойлер */
   // padding: 10px; /* Поля вокруг текста */
+  transition: display 250ms cubic-bezier(.4,.0,.23,1);
 }
+
+.ymaps_link {
+  display: none;
+}
+
+.ymaps {
+  display: block;
+}
+
+.spoilerbutton {
+  display: block;
+  margin: 5px 0;
+}
+
+.spoiler_test {
+  overflow: hidden;
+}
+
+.spoiler_test > div {
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.spoilerbutton[value="Show"]+.spoiler_test>div {
+  max-height: 0;
+}
+
+.spoilerbutton[value="Hide"]+.spoiler_test>div {
+  max-height: 500px; /*use a big value here*/
+}
+
+
 
 /* ==========================================================================
    Media Queries
@@ -842,6 +895,13 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 871px) {
+  .footer_container footer {
+    flex-wrap: wrap;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .header_container {
     header {
@@ -869,6 +929,24 @@ body {
   .main {
     height: 800px;
   }
+
+  .ymaps {
+    display: none;
+  }
+
+  .ymaps_link {
+    display: block;
+  }
+
+  .main_container {
+    background-image: none;
+  }
+
+  .main_icons {
+    margin-top: 100px;
+  }
+
+
 }
 @media only screen and (max-width: 1239px) {
   .wrapper {
@@ -888,6 +966,18 @@ body {
     padding-left: 25px;
     padding-right: 25px;
     justify-content: space-around;
+  }
+
+  .clinic_1 > h3 {
+    margin-top: 50px;
+  }
+
+  .main_heading {
+    width: 250px;
+  }
+
+  .main_subheading {
+    width: 300px;
   }
 }
 @media only screen and (min-width: 1240px) {
